@@ -1,0 +1,59 @@
+# Data buku
+buku1 = {"no_isbn": "978-3-16-148410-0", "judul": "Python Programming", "pengarang": "M SABRI NURZAMAN", "isihalaman": 300, "deskripsi": "Buku panduan pemrograman Python", "stok": 10, "booked": 0}
+buku2 = {"no_isbn": "978-3-16-148410-1", "judul": "Data Science Essentials", "pengarang": "sabri nz", "isihalaman": 250, "deskripsi": "Pengantar ilmu data", "stok": 8, "booked": 2}
+buku3 = {"no_isbn": "978-3-16-148410-2", "judul": "Web Development Basics", "pengarang": "sabrina", "isihalaman": 200, "deskripsi": "Dasar-dasar pengembangan web", "stok": 5, "booked": 1}
+
+list_buku = [buku1, buku2, buku3]
+
+# Data mahasiswa
+mahasiswa1 = {"nama": "Sabri", "nim": "20230040147", "nomerhp": "081213304577", "alamat": "Jl. karang tengah No. 123"}
+mahasiswa2 = {"nama": "sabrina", "nim": "20230040146", "nomerhp": "081213304577", "alamat": "Jl. babakan No. 456"}
+
+list_mahasiswa = [mahasiswa1, mahasiswa2]
+
+# Data peminjaman
+peminjaman1 = {"nim": "20230040147", "no_isbn": "978-3-16-148410-0", "tanggalpinjam": "2024-05-23", "tanggal_kembali": "2024-06-06", "status": "Dikembalikan"}
+peminjaman2 = {"nim": "20230040146", "no_isbn": "978-3-16-148410-1", "tanggalpinjam": "2024-05-25", "tanggal_kembali": "2024-06-10", "status": "Belum dikembalikan"}
+
+list_peminjaman = [peminjaman1, peminjaman2]
+
+# Fungsi untuk menampilkan daftar buku
+def tampilkan_buku():
+    for buku in list_buku:
+        print("No ISBN:", buku["no_isbn"])
+        print("Judul:", buku["judul"])
+        print("Pengarang:", buku["pengarang"])
+        print("Isi Halaman:", buku["isihalaman"])
+        print("Deskripsi:", buku["deskripsi"])
+        print("Stok:", buku["stok"])
+        print("Booked:", buku["booked"])
+        print()
+
+# Fungsi untuk menampilkan daftar mahasiswa
+def tampilkan_mahasiswa():
+    for mahasiswa in list_mahasiswa:
+        print("Nama:", mahasiswa["nama"])
+        print("NIM:", mahasiswa["nim"])
+        print("Nomor HP:", mahasiswa["nomerhp"])
+        print("Alamat:", mahasiswa["alamat"])
+        print()
+
+# Fungsi untuk menampilkan daftar peminjaman
+def tampilkan_peminjaman():
+    for peminjaman in list_peminjaman:
+        print("NIM:", peminjaman["nim"])
+        print("No ISBN:", peminjaman["no_isbn"])
+        print("Tanggal Pinjam:", peminjaman["tanggalpinjam"])
+        print("Tanggal Kembali:", peminjaman["tanggal_kembali"])
+        print("Status:", peminjaman["status"])
+        print()
+
+# Contoh pemanggilan fungsi untuk menampilkan data
+print("Daftar Buku:")
+tampilkan_buku()
+
+print("Daftar Mahasiswa:")
+tampilkan_mahasiswa()
+
+print("Daftar Peminjaman:")
+tampilkan_peminjaman()
